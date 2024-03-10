@@ -1,0 +1,10 @@
+<section class="mt-5 container-fluid">
+  <div class="row g-4 mt-5">
+    <div role="button"  [routerLink]="['/categoriesdetails' , category._id]" class="col-sm-6 col-md-4 col-lg-3" *ngFor="let category of categoriesData">
+      <div class="border border-success rounded shadow p-2 containner">
+         <img [src]="category.image" [alt]="category.name" class="w-100" height="280">
+         <h3 class="text-center text-main">{{category.name}}</h3>
+      </div>
+    </div>
+  </div>
+</section>

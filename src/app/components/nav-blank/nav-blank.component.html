@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" #navBar>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/images/freshcart-logo.svg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse styled-nav" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-capitalize" routerLinkActive="active-link" routerLink="home">home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-capitalize" routerLinkActive="active-link" routerLink="products">products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-capitalize" routerLinkActive="active-link" routerLink="categories">categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-capitalize" routerLinkActive="active-link" routerLink="brands">brands</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fas fa-heart fa-2x text-danger" routerLink="/wishlist" role="button"></i></a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active-link" routerLink="cart"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+      </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+            aria-expanded="false"><i class="fas fa-user fa-xl text-main"></i></a>
+          <ul class="dropdown-menu" >
+            <li  routerLinkActive="active-link" routerLink="forgetpassword" role="button"><a class="dropdown-item">Forget Password</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <span class="nav-link cursor-pointer" (click)="logOutUser()">SignOut</span>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>

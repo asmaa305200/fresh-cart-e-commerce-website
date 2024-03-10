@@ -1,0 +1,29 @@
+<section class="my-4">
+
+
+  <div class="row g-4 mt-5">
+    <div class="col-md-2" *ngFor="let item of productArr  | search : searchTerm  | paginate: { id: 'productPagination', itemsPerPage: pageSize, currentPage: currentPage, totalItems: total }">
+      <div class="product containner">
+        <i class="fa-regular fa-heart hearts" (click)="addfav(item._id)" *ngIf="!favData.includes($any(item._id))"></i>
+        <i class="fa-solid fa-heart hearts" (click)="removeFav(item._id)" *ngIf="favData.includes($any(item._id))"></i>
+        <div [routerLink]="['/details' , item._id]" class="p-2 cursor-pointer ">
+          <img class="w-100" [src]="item.imageCover" [alt]="item.title" />
+          <h3 class="h6 text-success">{{item.title.split(' ').slice(0 , 2).join( " ")}}</h3>
+          <h4 class="h6"> {{item.category.name}}</h4>
+          <div class="d-flex justify-content-between align-items-center rating-price">
+            <span>{{item.price}} EGP</span>
+            <div>
+              <i [class.rating-color]="item.ratingsAverage >num" class="fas fa-star rating-color" *ngFor="let num of [1,2,3,4,5]"></i>
+              <span class="text-muted">{{item.ratingsAverage}}</span>
+            </div>
+          </div>
+        </div>
+        <button (click)="addProductToCart(item._id)" class="btn-main w-100">Add Product</button>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center align-items-center mt-5"><pagination-controls id="productPagination" (pageChange)="pageChanged($event)" (pageBoundsCorrection)="pageChanged($event)"
+    [maxSize]="9" [directionLinks]="true" [autoHide]="true" [responsive]="true" previousLabel="Previous" nextLabel="Next"
+    screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page" screenReaderCurrentLabel="You're on page">
+  </pagination-controls></div>
+</section>

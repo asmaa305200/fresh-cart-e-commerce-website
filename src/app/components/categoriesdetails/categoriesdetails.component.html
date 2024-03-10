@@ -1,0 +1,12 @@
+<section class="w-75 mx-auto shadow rounded bg-main-light mt-5" *ngIf="CategoriesDetails._id">
+  <div class="row g-4 d-flex justify-content-center mt-5 align-items-center ">
+    <div class="col-md-6">
+      <div>
+        <img [src]="CategoriesDetails.image" [alt]="CategoriesDetails.name" class="w-75" height="500">
+      </div>
+    </div>
+    <div class="col-md-6">
+        <h2>{{CategoriesDetails.name}}</h2>
+    </div>
+  </div>
+</section>

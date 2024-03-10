@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+
+:root {
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+
+body {
+  font-family: var(--font-family) !important;
+}
+.styled-nav li:hover{
+  transform: scale(1.1);
+}
+
+.styled-nav li{
+  transition: transform .5s;
+}
+.nav-link {
+  transition: unset !important;
+}
+.slidersImg{
+  height: 300px;
+}
+.active-link {
+  background-color: var(--main-color) !important;
+  color: var(--light-color) !important;
+  border-radius: 5px;
+}
+
+.rating-color {
+  color: var(--rating-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.rating-price{
+  font-size: 14px;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.product {
+  border-radius: 5px;
+  border: solid 1px var(--main-color);
+  transition: box-shadow 0.5s;
+  overflow: hidden;
+  position: relative;
+
+}
+.containner:hover{
+  transform: scale(1.1);
+}
+.containner{
+  transition: transform .2s;
+}
+.product:hover .hearts{
+  right: 5px;
+}
+.hearts {
+  z-index: 99;
+  position: absolute;
+  top: 5px;
+  right: -30px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: right 0.7s;
+}
+
+.product:hover {
+  box-shadow: 0 0 10px #11bd1168;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+
+.btn-main {
+  background-color: var(--main-color);
+  padding: 7px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn-main:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.btn-main:disabled:hover {
+  background-color: #ccc;
+}
+
+.btn-main:hover {
+  background-color: #11bd11;
+}
+.product .btn-main{
+  transform: translateY(140%) ;
+  transition:  transform .7s;
+}
+.product:hover .btn-main{
+  transform: translateY(0) ;
+}
+.footer{
+  background-color:#1a1f1a;
+  color: #f0f3f2;
+}
+.contact{
+  font-size: 13px;
+  margin: 0;
+}

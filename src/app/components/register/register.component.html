@@ -26,7 +26,8 @@
   </div>
     <div class="alert alert-danger" *ngIf="registerForm.get('password')?.errors && registerForm.get('password')?.touched">
       <p *ngIf="registerForm.get('password')?.getError('required')">password is Required</p>
-      <p *ngIf="registerForm.get('password')?.getError('pattern')">password's MinLength is 6 and MaxLength is 20</p>
+      <p *ngIf="registerForm.get('password')?.getError('pattern')">password's MinLength is 6 and MaxLength is 20 
+      the password must contain at least one Uppercase Latter and numbers , not conain space  </p>
     </div>
   <div  class="mb-2">
     <label for="rePassword">rePassword:</label>
